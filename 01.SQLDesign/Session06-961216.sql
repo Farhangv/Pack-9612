@@ -150,6 +150,6 @@ CREATE TABLE Student
 	PersianBirthDate NVARCHAR(10),
 	CellPhone NVARCHAR(11),
 	--PRIMARY KEY(Id)
-	CONSTRAINT PK_Student_Id PRIMARY KEY (Id)
+	CONSTRAINT PK_Student PRIMARY KEY (Id)
 )
 
