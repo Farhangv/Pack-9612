@@ -52,3 +52,15 @@ CREATE TABLE Course_Student
 GO
 SELECT * FROM Student
 GO
+SELECT * 
+INTO Product
+FROM AdventureWorks.Production.Product
+GO
+DROP TABLE Product
+GO
+ALTER TABLE Teacher
+ADD EmployeeCode CHAR(8) UNIQUE
+GO
+ALTER TABLE Teacher
+DROP COLUMN Experience
+GO
