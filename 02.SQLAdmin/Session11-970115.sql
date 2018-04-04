@@ -1,0 +1,64 @@
+EXEC sp_executesql N'select * from sys.databases'
+GO
+CREATE TRIGGER TG_CreateTable
+ON ALL SERVER
+FOR CREATE_TABLE
+AS
+BEGIN
+	SELECT EVENTDATA()
+END
+GO
+CREATE DATABASE Session11
+GO
+USE Session11
+GO
+CREATE TABLE Student
+(
+	Id INT PRIMARY KEY,
+	Name NVARCHAR(50),
+	Family NVARCHAR(50)
+)
+GO
+CREATE TRIGGER TG_CreateTable
+ON ALL SERVER
+FOR CREATE_TABLE
+AS
+BEGIN
+	DECLARE @LoginName NVARCHAR(100)
+	DECLARE @CommandText NVARCHAR(1000)
+	SELECT @LoginName = EVENTDATA().value('(/EVENT_INSTANCE/LoginName)[1]', 'NVARCHAR(100)')
+	SELECT @CommandText = EVENTDATA().value('(/EVENT_INSTANCE/TSQLCommand/CommandText)[1]', 'NVARCHAR(1000)')
+	IF @LoginName = 'sa' AND @CommandText LIKE '%NationalCode%'
+	BEGIN
+		PRINT 'You Cannot create table which has column name NationalCode'
+		ROLLBACK TRAN
+	END
+
+END
+GO
+CREATE TABLE Teacher
+(
+	Id INT PRIMARY KEY,
+	Name NVARCHAR(50),
+	Family NVARCHAR(50)
+)
+GO
+CREATE TABLE SalesPerson
+(
+	Id INT PRIMARY KEY,
+	Name NVARCHAR(50),
+	Family NVARCHAR(50),
+	NationalCode CHAR(10)
+)
+GO
+CREATE TRIGGER TG_BlockDropTable
+ON DATABASE
+FOR DROP_TABLE
+AS
+BEGIN
+	ROLLBACK TRAN
+END
+GO
+DROP TABLE Employee
+GO
+--USE MSSQLSystemResource
