@@ -1,0 +1,107 @@
+﻿body.css-demo {
+    direction: rtl;
+    background-color:blueviolet;
+    margin:0;
+    font-size:10px;
+    }
+    body.css-demo p {
+    /*background-color:#888888;*/
+    /*background-color:#3b9;*/
+    background-color: rgba(100, 230, 170, 0.7);
+    }
+    body.css-demo .breaking {
+    background-color: rgba(100, 230, 170, 1);
+    color: #f00;
+    /*border: 3px solid #000;*/
+    /*border-right: 4px solid #000;*/
+    border-color:#000;
+    border-style: solid;
+    border-width:4px;
+    border-right-color: #f00;
+    text-align:justify;
+    padding: 25px 15px 50px 100px;
+    margin: 50px auto;
+    width:500px;
+    }
+    body.css-demo #news-01 {
+        font-weight: bold;
+    }
+    body.css-demo #news-02 {
+        /*background-color:blueviolet !important;*/
+    }
+    body.css-demo .en {
+        direction: ltr;
+        /*background-color:chocolate;*/
+    }
+    body.css-demo #top-news p {
+        font-family: Tahoma, Arial, Verdana;
+        font-size: 1.2em;
+    }
+    body.css-demo #bottom-news p {
+        font-size: 0.9em;
+        border: 1px dashed #000;
+        width: 300px;
+    }
+body.positioning-demo{
+    direction:rtl;
+}
+    body.positioning-demo div {
+        border: 1px solid #000;
+        background-color: #ccc;
+        width: 100px;
+        height: 100px;
+    }
+    body.positioning-demo .class-01{
+        display:inline;
+    }
+    body.positioning-demo .class-02 {
+        display: inline-block;
+    }
+    body.positioning-demo .class-03 {
+        display: block;
+    }
+    body.positioning-demo .class-04 {
+        display: none !important;
+    }
+    body.positioning-demo .bordered{
+        border: 1px solid #000 !important;
+        position:relative;
+    }
+    body.positioning-demo .class-05:first-child {
+        display: none;
+        position:relative;
+        top:20px;
+        right:20px;
+    }
+    body.positioning-demo .class-05:nth-child(2) {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 120px;
+    }
+    body.positioning-demo .class-05:last-child {
+        display: none;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    body.positioning-demo .class-06:first-child {
+        display: block;
+        float:right;
+
+    }
+    body.positioning-demo .class-06:nth-child(2){
+        display: block;
+        float: left;
+    }
+    body.positioning-demo .class-06:nth-child(3) {
+        display: block;
+        float: left;
+    }
+    body.positioning-demo .no-color{
+        background-color: transparent !important;
+        width:100%;
+        height:auto;
+        border:none;
+        margin: 20px auto;
+    }
