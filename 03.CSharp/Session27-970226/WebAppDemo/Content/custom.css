@@ -1,0 +1,24 @@
+﻿@import url(font-awesome.css);
+@import url(../fonts/Vazir/vazir.css);
+body {
+    direction:rtl;
+    font-family:Vazir;
+}
+body > div.container div, body > div.container-fluid div{
+    height:50px;
+    border:1px solid #999;
+    border-radius: 5px;
+    background-color:#ccc;
+}
+.row, .container, .container-fluid{
+    background-color:transparent;
+}
+
+body > div:first-child{
+    margin-top:70px
+}
+.navbar-brand img{
+    height:30px;
+    margin-left: -15px;
+    margin-top:-6px;
+}
