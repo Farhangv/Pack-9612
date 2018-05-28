@@ -1,0 +1,48 @@
+﻿@{
+    var name = "David";
+    var family = "Doe";
+    var title = "";
+    if (name == "John" && family == "Doe")
+    {
+        title = "Dr.";
+    }
+    else
+    {
+        title = "Mr.";
+    }
+
+    var fields = new List<string>()
+    {
+        "C#","Java","PHP","JavaScript", "TypeScript"
+    };
+
+}
+
+<h1>@title  @name @family</h1>
+<br />
+Instagram: @@JohnDoe
+<br />
+john@doe.com
+<br />
+@(@"Hello\tHow Are You?")
+<br />
+@("Hello\tHow Are You?")
+
+@if (title == "Dr.")
+{
+    <a href="#">University</a>
+}
+else
+{
+    <a href="#">Company</a>
+}
+
+<a href="#">@( title == "Dr." ? "University" : "Company" )</a>
+
+
+<ul>
+    @foreach (var field in fields)
+    {
+        <li>@field</li>
+    }
+</ul>

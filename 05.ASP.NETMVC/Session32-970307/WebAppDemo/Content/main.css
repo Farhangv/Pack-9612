@@ -1,0 +1,15 @@
+﻿@import url(/fonts/Vazir/vazir.css);
+body {
+    direction:rtl;
+    font-family:Vazir;
+
+}
+    body > div.container:first-of-type, body > div.container-fluid:first-of-type {
+        margin-top: 70px;
+    }
+
+.navbar-brand img {
+    height: 30px;
+    margin-left: -15px;
+    margin-top: -6px;
+}

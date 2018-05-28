@@ -1,0 +1,17 @@
+﻿@using WebAppDemo.Models
+@model List<User>
+
+<table class="table table-bordered table-striped">
+    <thead></thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.Id</td>
+                <td>@user.FullName</td>
+                <td>@user.Username</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
